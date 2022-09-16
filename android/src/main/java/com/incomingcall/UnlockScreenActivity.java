@@ -81,7 +81,7 @@ public class UnlockScreenActivity extends AppCompatActivity implements UnlockScr
 
         tvName = findViewById(R.id.tvName);
         tvInfo = findViewById(R.id.tvInfo);
-        ivAvatar = findViewById(R.id.ivAvatar);
+        // ivAvatar = findViewById(R.id.ivAvatar);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -96,12 +96,12 @@ public class UnlockScreenActivity extends AppCompatActivity implements UnlockScr
                 String info = bundle.getString("info");
                 tvInfo.setText(info);
             }
-            if (bundle.containsKey("avatar")) {
-                String avatar = bundle.getString("avatar");
-                if (avatar != null) {
-                    Picasso.get().load(avatar).transform(new CircleTransform()).into(ivAvatar);
-                }
-            }
+            // if (bundle.containsKey("avatar")) {
+            //     String avatar = bundle.getString("avatar");
+            //     if (avatar != null) {
+            //         Picasso.get().load(avatar).transform(new CircleTransform()).into(ivAvatar);
+            //     }
+            // }
             if (bundle.containsKey("timeout")) {
                 this.timeout = bundle.getInt("timeout");
             }
